@@ -21,7 +21,7 @@ def main(df):
     df_scaled_array = s.fit_transform(df[feature])
     X = pd.DataFrame(df_scaled_array, columns=feature)
     y = df["Target"]
-    X_Train,X_Test,y_train,y_test = train_test_split(X,y,test_size = 0.2,random_state = 42)
+    X_Train,X_Test,y_train,y_test = train_test_split(X,y,test_size = 0.2,random_state = 1)
     model = SVC(kernel="linear")
     model.fit(X_Train,y_train)
     j.dump(model,'model.pkl')
