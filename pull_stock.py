@@ -13,7 +13,6 @@ def PreProcessing(stock):
 
     if isinstance(stock.columns, pd.MultiIndex):
         stock.columns = stock.columns.get_level_values(0)
-    target = []
     new_names = {
         'Close': 'Close',
         'High': 'High',
