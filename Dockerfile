@@ -4,3 +4,4 @@ WORKDIR /app # WORKDIR creates a directory called an app and manages what are th
 
 COPY requirment.txt .
 RUN pip install -r requirment.txt
+RUN dvc init 
